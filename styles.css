@@ -38,3 +38,162 @@ html {
     --ff-heading:"Segoe UI", sans-serif;
 
 }
+
+/* General Styling */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-body);
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-body);
+    font-size: 1.6rem;
+}
+
+.d_flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+    background: linear-gradient(rgb(73, 32, 255));
+}
+
+.accent {
+    color: var(--light-blue);
+}
+/* End General styles */
+
+
+/* Nav Styles */
+nav {
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+    width: 100%;
+    /* position: fixed;
+    top: 0;
+    background-color: var(--bg-color); */
+}
+
+nav ul {
+    width: 80%;
+    gap: 5%;
+    justify-content: right;
+    font-weight:600;
+}
+
+nav ul a {
+    font-size: var(--fz-md);
+    font-family: var(--font-mono);
+}
+
+.btn {
+    border: 1px solid var(--light-blue);
+    color: var(--light-blue);
+    padding: 12px 25px;
+    width: fit-content;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    transition: color 0.5s linear;
+    position: relative
+}
+
+/* .btn:hover {
+    color: #000
+} */
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-navy);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+
+.btn:hover::before {
+    transform: scaleX(1)
+}
+
+.nav-btn {
+    padding: 8px 20px;
+}
+
+svg {
+    fill: var(--dark-navy);
+    width: 20px;
+    height: 20px;
+}
+
+/* End Nav styles */
+
+
+/* Hero section styles */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80%;
+    color: #000;
+}
+
+.hero-section p {
+    font-size: 9rem;
+    font-weight: 900;
+}
+
+.hero-section .social-icons {
+    gap: 15px;
+}
+
+.hero-section .social-icons li a {
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .social-icons li svg:hover {
+    fill: var(--light-blue)
+}
+
+.hero-btn {
+    padding: 1rem 4rem;
+    margin-top: 2rem;
+}
