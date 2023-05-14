@@ -1,0 +1,40 @@
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* colors */
+    --light-blue: #08FDD8;
+    --text-color: #E6F1FF;
+    --bg-color: #0A192F;/*rgb(236, 236, 236);*/
+    --dark-navy: #030a16aa;
+    --light-navy: #112240;
+    --lightest-navy: #112240;
+    --shadow-color: rgba(2,12,27,0.7);
+    --dark-gray: #495670;
+    --gray: #8892b0;
+    --light-gray: #a8b2d1;
+    --lightest-gray: #CCD6F6;
+
+    /* font-sizes */
+    --primary-heading: 5rem;
+    --fz-xxs: 1.2rem;
+    --fz-xs: 1.3rem;
+    --fz-sm: 1.6rem;
+    --fz-md: 1.8rem;
+    --fz-lg: 2rem;
+    --fz-xl: 2.2rem;
+    --fz-xxl: 2.4rem;
+    --fz-heading: 3.2rem;
+    --border-radius: .4rem;
+    --nav-height: 10rem;
+    --nav-scroll-height: 7rem;
+
+
+    /* Font-family */
+    --ff-section: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --ff-body: 'Segoe UI', Verdana,   serif, Tahoma, sans-serif;
+    --ff-heading:"Segoe UI", sans-serif;
+
+}
