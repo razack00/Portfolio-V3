@@ -1,3 +1,6 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 html {
     font-size: 62.5%;
 }
@@ -7,24 +10,23 @@ html {
     --light-blue: #08FDD8;
     --text-color: #E6F1FF;
     --bg-color: #0A192F;/*rgb(236, 236, 236);*/
+    --dark-text: #040c18;
     --dark-navy: #030a16aa;
     --light-navy: #112240;
     --lightest-navy: #112240;
     --shadow-color: rgba(2,12,27,0.7);
-    --dark-gray: #495670;
     --gray: #8892b0;
-    --light-gray: #a8b2d1;
-    --lightest-gray: #CCD6F6;
+
 
     /* font-sizes */
     --primary-heading: 5rem;
     --fz-xxs: 1.2rem;
     --fz-xs: 1.3rem;
-    --fz-sm: 1.6rem;
-    --fz-md: 1.8rem;
-    --fz-lg: 2rem;
-    --fz-xl: 2.2rem;
-    --fz-xxl: 2.4rem;
+    --fz-sm: 1.7rem;
+    --fz-md: 1.9rem;
+    --fz-lg: 2.1rem;
+    --fz-xl: 2.3rem;
+    --fz-xxl: 2.5rem;
     --fz-heading: 3.2rem;
     --border-radius: .4rem;
     --nav-height: 10rem;
@@ -32,8 +34,9 @@ html {
 
 
     /* Font-family */
-    --ff-section: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --ff-section: "Calibre","Inter","San Francisco","SF Pro Text";
+    --font-mono:'Roboto Mono' , monospace, sans-serif, "Fira Code";
+    --font-poppins: 'Poppins', sans-serif;
     --ff-body: 'Segoe UI', Verdana,   serif, Tahoma, sans-serif;
     --ff-heading:"Segoe UI", sans-serif;
 
@@ -45,7 +48,6 @@ html {
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--ff-body);
     list-style-type: none;
     text-decoration: none;
     border: none;
@@ -55,7 +57,6 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: var(--ff-body);
     font-size: 1.6rem;
 }
 
@@ -71,23 +72,40 @@ body {
 
 header {
     width: 100%;
-    height: 100vh;
-    position: relative;
     text-align: center;
 }
 
 .vid {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
     z-index: -1;
-    background: linear-gradient(rgb(73, 32, 255));
+}
+
+/* section {
+    background-color: red;
+    padding-top: 10rem;
+} */
+
+.overlay {
+    position: absolute;
+    background-color: rgba(3, 20, 27, 0.778);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    /* z-index: -1; */
 }
 
 .accent {
-    color: var(--light-blue);
+    color: #fff700;
 }
 /* End General styles */
 
@@ -95,40 +113,65 @@ header {
 /* Nav Styles */
 nav {
     justify-content: space-between;
-    padding: 1.5rem 5rem;
     width: 100%;
-    /* position: fixed;
+    position: sticky;
     top: 0;
-    background-color: var(--bg-color); */
+    padding: 1.5rem;
+    z-index: 5;
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: var(--fz-md);
+    /* text-transform: uppercase; */
+    color: var(--text-color);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.logo-suffix {
+    background: linear-gradient(90deg, #00dbde, #ffdf00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 nav ul {
     width: 80%;
-    gap: 5%;
+    justify-content: space-around;
     justify-content: right;
-    font-weight:600;
+    gap: 4%;
 }
 
 nav ul a {
-    font-size: var(--fz-md);
+    font-size: var(--fz-sm);
     font-family: var(--font-mono);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
+nav ul li {
+    counter-increment: item 1;
+}
+
+nav ul li a::before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    /* color: var(--light-blue); */
+    font-size: var(--fz-xs);
+    text-align: right;
+  }
+
 .btn {
-    border: 1px solid var(--light-blue);
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, #00dbde, #ffdf00);
+    border-image-slice: 1;
     color: var(--light-blue);
     padding: 12px 25px;
-    width: fit-content;
-    background-color: transparent;
     border-radius: 5px;
     font-family: var(--font-mono);
     transition: color 0.5s linear;
-    position: relative
+    position: relative;
 }
-
-/* .btn:hover {
-    color: #000
-} */
 
 .btn::before {
     content: "";
@@ -137,7 +180,7 @@ nav ul a {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--light-navy);
+    background:#ffffff;
     z-index: -1;
     transition: transform 0.5s;
     transform-origin: 0 0;
@@ -149,14 +192,10 @@ nav ul a {
     transform: scaleX(1)
 }
 
-.nav-btn {
-    padding: 8px 20px;
-}
-
 svg {
-    fill: var(--dark-navy);
-    width: 20px;
-    height: 20px;
+    fill: var(--dark-text);
+    width: 30px;
+    height: 30px;
 }
 
 /* End Nav styles */
@@ -167,19 +206,35 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 80%;
-    color: #000;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--font-mono);
+    margin-bottom: 6rem
 }
 
 .hero-section p {
-    font-size: 9rem;
-    font-weight: 900;
+    font-size: 11vh;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .22rem;
+    text-shadow: 1px 3px 11px rgba(0,0,0,.3);
+    font-family: var(--font-poppins);
 }
 
 .hero-section .social-icons {
-    gap: 15px;
+    gap: 2.5rem;
+    position: absolute;
+    top:35%;
+    left: 0;
+    background-color: #ffffff8b;
+    writing-mode: vertical-lr;
+    padding: .8rem;
 }
 
 .hero-section .social-icons li a {
