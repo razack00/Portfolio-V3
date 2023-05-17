@@ -1,23 +1,23 @@
-let switchPage = (newPage) => {
+function switchPage(newPage) {
     const pages = document.querySelectorAll('.page')
-    pages.forEach((page) => {
+    pages.forEach(page => {
         page.style.display = "none"
     })
-    const currentPage = document.querySelector(`.${newPage}`)
 
-    // currentPage.className !== 'home' && (document.querySelectorAll('nav li').style.color = "#555")
-
-currentPage.style.display = "block"
+    const currentPage = document.querySelector(newPage)
+    currentPage.style.display = 'block'
+    console.log(currentPage)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    switchPage("section-1")
-    document.querySelectorAll('nav li').forEach((li) => {
-        li.onclick = (e) => {
-            const page = e.target.dataset.section
-            if(li !== page) {
+    switchPage('.hero-section')
+    const sections = document.querySelectorAll('nav a')
+    sections.forEach(section => {
+        section.onclick = (e) => {
+            page = `.${e.target.dataset.section}`
+            if(section !== page) {
                 switchPage(page)
-            } 
+            }
         }
     })
 })
