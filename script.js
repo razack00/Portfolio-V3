@@ -5,14 +5,14 @@ function switchPage(newPage) {
     })
 
     const currentPage = document.querySelector(newPage)
-    currentPage.style.display = 'block'
+    currentPage.style.display = 'flex'
     console.log(currentPage)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     switchPage('.hero-section')
     const sections = document.querySelectorAll('nav a')
-    sections.forEach(section => {
+    sections.forEach(section => {  
         section.onclick = (e) => {
             page = `.${e.target.dataset.section}`
             if(section !== page) {
