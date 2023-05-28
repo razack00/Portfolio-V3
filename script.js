@@ -1,26 +1,34 @@
 function switchPage(newPage) {
     const pages = document.querySelectorAll('.page')
+    // const project_sec = document.querySelector('.project-section') 
     pages.forEach(page => {
         page.style.display = "none"
     })
 
+    if(newPage == '.webdev' || newPage == '.design' || newPage == '.others') {
+        document.querySelector('.project-section').style.display = 'flex'
+    }else if(newPage == ".project-section") {
+        document.querySelector('.webdev').style.display = 'flex'
+    }
     const currentPage = document.querySelector(newPage)
     currentPage.style.display = 'flex'
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // page switching
     switchPage('.about-section')
-    const links = document.querySelectorAll('nav a')
+    const links = document.querySelectorAll('.link')
     links.forEach(link => {  
         link.onclick = (e) => {
             page = `.${e.target.dataset.page}`
-            console.log(page)
             if(link !== page) {
                 switchPage(page)
             }
         }
     })
 
+    // creating spans for hover effect on hero title
     const title = document.querySelector('.intro')
     const text = "WebDeveloper &Designer".split(" ")
     text.forEach(function(word) {
@@ -34,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title.appendChild(div)
     })
 
-
+    // spans for cursor rotation
     const cursortext = document.querySelector('.cursor');
     cursortext.innerHTML = cursortext.textContent.replace(/\S/g, "<span>$&</span>")
 
@@ -43,10 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
         element[i].style.transform = "rotate("+i*12.2+"deg)"
     }
 
+    // mouse follow logic
     let cursor = document.querySelector('.cursor')
     document.addEventListener('mousemove', (e) => {
         cursor.style.cssText =  'left: ' + (e.clientX+30) + 'px; top: ' + (e.clientY+40) + 'px;';
     })
+
+    // Project hover effect
+    const projects = document.querySelectorAll('.project')
+    const projectContent = document.querySelectorAll('.project-content')
+    projects.forEach(project => {
+        project.onmouseover = () => {
+            project.lastElementChild.style.display = 'flex'
+        }
+        project.onmouseout = () => {
+            project.lastElementChild.style.display = 'none'
+        }
+    })
+    
 })
 
 
