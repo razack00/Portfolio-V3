@@ -1,0 +1,95 @@
+/* chillax font */
+@font-face {
+  font-family: 'Chillax-Regular';
+  src: url('../assets/fonts/Chillax-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Chillax-Regular.woff') format('woff'),
+       url('../assets/fonts/Chillax-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Medium';
+  src: url('../assets/fonts/Chillax-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Chillax-Medium.woff') format('woff'),
+       url('../assets/fonts/Chillax-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Semibold';
+  src: url('../assets/fonts/Chillax-Semibold.woff2') format('woff2'),
+       url('../assets/fonts/Chillax-Semibold.woff') format('woff'),
+       url('../assets/fonts/Chillax-Semibold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Bold';
+  src: url('../assets/fonts/Chillax-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Chillax-Bold.woff') format('woff'),
+       url('../assets/fonts/Chillax-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+/* grandslang font */
+@font-face {
+  font-family: 'grandslang-roman';
+  src: url('../assets/fonts/GrandSlang-Roman.ttf') format('truetype');
+}
+
+/* acorn font */
+@font-face {
+  font-family: 'Acorn-bold';
+  src: url('../assets/fonts/Acorn-Bold.woff2')   format('woff2'),
+      url('../assets/fonts/Acorn-Bold.woff') format('woff'),
+      url('../assets/fonts/Acorn-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Acorn-medium';
+  src: 
+      url('../assets/fonts/Acorn-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Acorn-Medium.woff') format('woff'),
+      url('../assets/fonts/Acorn-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Acorn-regular';
+  src:
+      url('../assets/fonts/Acorn-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Acorn-Regular.woff') format('woff'),
+      url('../assets/fonts/Acorn-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Acorn-semibold';
+  src:
+      url('../assets/fonts/Acorn-SemiBold.woff2') format('woff2'),
+      url('../assets/fonts/Acorn-SemiBold.woff') format('woff'),
+      url('../assets/fonts/Acorn-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
