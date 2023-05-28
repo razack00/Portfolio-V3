@@ -15,13 +15,13 @@
 <body>
     <div class="container">
         <header>
-            <a href="#"><em class="logo">Razack.<span class="logo-suffix accent">dev</span></em></a>
+            <a class="logo" href="#">Razack</a>
             <nav class="primary-nav">
                 <ul class="main-links">
-                    <li><a data-page="hero-section" href="#home">Home</a></li>
-                    <li><a data-page="about-section" href="#about">About</a></li>
-                    <li><a data-page="portfolio-section" href="#portfolio">Projects</a></li>
-                    <li><a data-page="contact-section" href="#contact">Contact</a></li>
+                    <li><a class="link" data-page="hero-section" href="#home">Home</a></li>
+                    <li><a class="link" data-page="about-section" href="#about">About</a></li>
+                    <li><a class="link" data-page="project-section" href="#portfolio">Projects</a></li>
+                    <li><a class="link" data-page="contact-section" href="#contact">Contact</a></li>
                 </ul>
                 <ul class="social-icons">
                     <li>
@@ -45,16 +45,33 @@
                     </li>
                 </ul>
             </nav>
+            <nav class="mobile-nav">
+                <div class="menu-btn">
+                    <div class="item1"></div>
+                    <div class="item2"></div>
+                    <div class="item3"></div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li data-page="home">Home</li>
+                        <li data-page="about">About</li>
+                        <li data-page="projects">Projects</li>
+                        <li data-page="resume">Resume</li>
+                        <li data-page="testimonials">Testimonials</li>
+                        <li data-page="contact">Contact</li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <main class="hero-section page" id="home">
             <div class="hero-content">
-                <div class="intro">
+                <h1 class="intro">
                     <!-- <p class="greet">hello</p>
                     <p class="name">I'm Razack</p> -->
                     <!-- <img class="waving" src="./assets/media/waving.png" alt=""> -->
-                </div>
+                </h1>
                 <div class="desc">
-                    <h1> I’m a Frontend developer & Designer specializing  in building exceptional <span class="accent">digital experience</span> digital experience. based in the Cameroon.</h1>
+                    <p> I’m a Frontend developer & Designer specializing  in building exceptional <span class="accent">digital experience</span> digital experience. based in the Cameroon.</p>
                     <div class="hero-links">
                         <a href="#"><i class="fa-solid fa-arrow-right-long"></i>more about me</a>
                         <a href="#"><i class="fa-solid fa-arrow-right-long"></i>view my projects</a>
@@ -64,9 +81,9 @@
         </main>
         <div class="greet">Hello, There.</div>
         <div class="cursor">Razack-frontend-web-deveoper-</div>
-        <section class="about-section container page d_flex" id="about">
-            <div class="about d_flex">
-                <h2 class="about-heading">About Me</h2>
+        <section class="about-section page" id="about">
+            <div class="about-content">
+                <h2 class="subtitle">About.</h2>
                 <div class="about-section-content">
                     <h3>A dedicated Front-end Developer
                         based in Yaounde, Cameroon </h3>
@@ -142,13 +159,11 @@
                     </ul>
                 </div>
             </div>
-            <div>
-                <img src="./assets/media/3648.webp" alt="">
-                <div class="cursor">Razack-frontend-web-deveoper-</div>
+            <div class="img-bg">
             </div>
         </section>
 
-        <section class="skills-section container page d_flex" id="#about">
+        <section class="skills-section container page" id="#about">
             <h2>Skills</h2>
             <div class="skill">
                 <i class="fa-solid fa-terminal"></i>
@@ -188,60 +203,91 @@
             </div>
         </section>
 
-        <section class="portfolio-section page container" id="portfolio">
-            <h2>Portfolio</h2>
-            <h3>Top Projects</h3>
-            <div class="cards d_flex ">
-                <div class="card card1 d_flex">
-                    <div class="card-content d_flex">
-                        <h4 class="card-title">Netflix Clone</h4>
-                        <p>Data Analytics SPSS Counter Maintainance Adobe premiere Pro Computer Adobe After effect premier PromaintenanceMaintenace Computer Adobe Premier Pro <span class="accent">Adobe After</span> effect Adobe After effect Data Analytics SPSS Counter Maintainance Adobe premiere Pro Computer Adobe After effect premier PromaintenanceMaintenace Computer</p>
-                        <div class="project-tools">
-                            <span>VS Code</span>
-                            <span>VS Code</span>
-                            <span>VS Code</span>
-                            <span>VS Code</span>
-                        </div>
-                        <div class="view-options">
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-img1 portfolio-img">
-                    </div>
-                </div>
-                <div class="card card2 d_flex">
-                    <div class="portfolio-img2 portfolio-img">
-                    </div>
-                    <div class="card-content card2-content d_flex">
-                        <h4 class="card-title">Netflix Clone</h4>
-                        <p>Data Analytics SPSS Counter Maintainance Adobe premiere Pro Computer Adobe After effect premier PromaintenanceMaintenace Computer Adobe Premier Pro <span class="accent">Adobe After</span> effect Adobe After effect Data Analytics SPSS Counter Maintainance Adobe premiere Pro Computer Adobe After effect premier PromaintenanceMaintenace Computer</p>
-                        <ul class="project-tools d_flex">
-                            <li>VS Code</li>
-                            <li>VS Code</li>
-                            <li>VS Code</li>
-                            <li>VS Code</li>
-                        </ul>
-                        <div class="view-options">
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-subsection d_flex">
-                <h3>Other Projects</h3>
-                <ul class="categories d_flex">
-                    <li class="active">Web Development</li>
-                    <li>Web Design</li>
-                    <li>Other Projects</li>
+        <section class="project-section page" id="portfolio">
+            <h2 class="subtitle">Projects.</h2>
+            <div class="projects-container">
+                <ul class="categories">
+                    <li><a class="link" data-page="webdev" href="#">Web Development</a></li>
+                    <li><a class="link" data-page="design" href="#">Web Design</a></li>
+                    <li><a class="link" data-page="others" href="#">Other Projects</a></li>
                 </ul>
-                <div class="project-preview d_flex">
-                    <img data-link="dev" src="" alt="">
+                <div class="projects webdev page">
+                    <div class="project">
+                        <img src="./assets/media/netflix.jpg" alt="project image">
+                        <div class="project-content">
+                            <h3 class="project-title">Netflix Clone</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptates.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./assets/media/about-img.jpg" alt="project image">
+                        <div class="project-content">
+                            <h3 class="project-title">Netflix Clone</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptates.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects design page">
+                    <div class="project">
+                        <img src="./assets/media/netflix.jpg" alt="project image">
+                        <div class="project-content">
+                            <h3 class="project-title">Netflix Clone</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptates.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./assets/media/about-img.jpg" alt="project image">
+                        <div class="project-content">
+                            <h3 class="project-title">Netflix Clone</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptates.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects others page">
+                    <div class="project">
+                        <img src="./assets/media/about-img.jpg" alt="project image">
+                        <div class="project-content">
+                            <h3 class="project-title">Netflix Clone</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptates.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./assets/media/about-img.jpg" alt="project image">
+                        <div class="project-content">
+                            <h3 class="project-title">Netflix Clone</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptates.</p>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="contact-section page" id="#contact"></section>
-    </div></body>
+        <section class="contact-section page" id="#contact">
+            
+        </section>
+    </div>
+</body>
 </html>
