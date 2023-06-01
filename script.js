@@ -5,26 +5,36 @@ function switchPage(newPage) {
         page.style.display = "none"
     })
 
-    if(newPage == '.webdev' || newPage == '.design' || newPage == '.others') {
+    // checking to see if newPage is equal to any categories, in which case project display flex in other for categories to display on it
+    if(newPage == 'webdev' || newPage == 'design' || newPage == 'others') {
         document.querySelector('.project-section').style.display = 'flex'
-    }else if(newPage == ".project-section") {
+    }else if(newPage == "project-section") {
         document.querySelector('.webdev').style.display = 'flex'
     }
-    const currentPage = document.querySelector(newPage)
+
+    // displaying current page
+    const currentPage = document.querySelector(`.${newPage}`)
     currentPage.style.display = 'flex'
+
+
+    document.querySelectorAll(".link").forEach((a) => {
+        a.classList.remove("active");
+    });
+    
+    // //add the active class to the nav link that corresponds to the page
+    document.querySelector(`.link[data-page="${newPage}"]`).classList.add("active");
+    console.log(newPage)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 
     // page switching
-    switchPage('.about-section')
-    const links = document.querySelectorAll('.link')
+    switchPage('about-section')
+    const links = document.querySelectorAll('nav .link, .categories .link')
     links.forEach(link => {  
         link.onclick = (e) => {
-            page = `.${e.target.dataset.page}`
-            if(link !== page) {
+            page = e.target.dataset.page
                 switchPage(page)
-            }
         }
     })
 
