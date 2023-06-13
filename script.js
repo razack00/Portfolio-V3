@@ -28,11 +28,27 @@ function switchPage(newPage) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+      //add logic for toggling the menu
+    const menu = document.querySelector(".mobile-nav");
+    const menuToggle = document.querySelector(".menu-btn");
+    menuToggle.onclick = () => {
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    };
+
+    //hide the menu on bigger screens
+    window.onresize = () => {
+        if (window.innerWidth > 768) {
+            menu.style.display = "none"
+        }
+    }
+
     // page switching
-    switchPage('about-section')
-    const links = document.querySelectorAll('nav .link, .categories .link')
+    switchPage('project-section')
+    const links = document.querySelectorAll('nav .link, .categories .link, .mobile-nav li')
     links.forEach(link => {  
+        console.log(link)
         link.onclick = (e) => {
+            menu.style.display = 'none'
             page = e.target.dataset.page
                 switchPage(page)
         }
